@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRCS Recall Quiz: 81-120</title>
+    <style>
+      :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --success: #27ae60;
+        --error: #e74c3c;
+        --bg: #f4f7f6;
+      }
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background-color: var(--bg);
+        color: #333;
+        line-height: 1.5;
+        padding: 10px;
+        margin: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: var(--primary);
+        text-align: center;
+        font-size: 1.8rem;
+        border-bottom: 3px solid var(--secondary);
+        padding-bottom: 10px;
+      }
+      .intro {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+      }
+      .question-block {
+        margin-bottom: 30px;
+        padding: 15px;
+        border-left: 5px solid var(--secondary);
+        background: #fcfcfc;
+        border-radius: 0 8px 8px 0;
+      }
+      .question-text {
+        font-weight: 600;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .options {
+        display: grid;
+        gap: 8px;
+      }
+      .options label {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+        display: block;
+      }
+      .options label:hover {
+        background-color: #f0f7ff;
+        border-color: var(--secondary);
+      }
+      input[type="radio"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+      }
+      .btn-container {
+        position: sticky;
+        bottom: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+      }
+      button {
+        width: 100%;
+        padding: 15px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      button:hover {
+        background: var(--secondary);
+      }
+      #result-area {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .feedback {
+        margin-top: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        display: none;
+      }
+      .correct-ans {
+        color: var(--success);
+      }
+      .wrong-ans {
+        color: var(--error);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MRCS Anatomy Recalls</h1>
+      <p class="intro">Questions 81 to 120 (April 2019 Recalls)</p>
+
+      <form id="quizForm">
+        <!-- Q81 -->
+        <div class="question-block" id="q81-block">
+          <span class="question-text"
+            >81. Countercurrent mechanism leading to the concentration of urine
+            in the loop of Henle is mainly mediated by?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q81" value="A" /> A. Active transport
+              of solute out of thin section</label
+            >
+            <label
+              ><input type="radio" name="q81" value="B" /> B. Impermeability to
+              water in thick ascending limb</label
+            >
+            <label
+              ><input type="radio" name="q81" value="C" /> C. Permeability to
+              solute in descending limb</label
+            >
+            <label
+              ><input type="radio" name="q81" value="D" /> D. Permeability to
+              solute in thick ascending limb</label
+            >
+          </div>
+          <div class="feedback" id="f81">Correct: B</div>
+        </div>
+
+        <!-- Q82 -->
+        <div class="question-block">
+          <span class="question-text"
+            >82. 33yo man with spinal cord transection but still has bladder
+            control due to:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q82" value="A" /> A. Intact
+              parasympathetic to external sphincter</label
+            >
+            <label
+              ><input type="radio" name="q82" value="B" /> B. Intact innervation
+              to internal sphincter</label
+            >
+            <label
+              ><input type="radio" name="q82" value="C" /> C. Intact detrusor
+              muscle innervation</label
+            >
+            <label
+              ><input type="radio" name="q82" value="D" /> D. Intact pudendal
+              nerve</label
+            >
+          </div>
+          <div class="feedback" id="f82">Correct: B</div>
+        </div>
+
+        <!-- Q83 -->
+        <div class="question-block">
+          <span class="question-text"
+            >83. Tracheostomy incision landmark is midway between suprasternal
+            notch and:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q83" value="A" /> A. Cricoid</label
+            >
+            <label><input type="radio" name="q83" value="B" /> B. Hyoid</label>
+            <label
+              ><input type="radio" name="q83" value="E" /> E. Thyroid</label
+            >
+          </div>
+          <div class="feedback" id="f83">Correct: A</div>
+        </div>
+
+        <!-- Q84 -->
+        <div class="question-block">
+          <span class="question-text"
+            >84. 70yo diabetic post-embolectomy, BP 90/60, dark brown urine
+            (myoglobin+). Cause?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q84" value="B" /> B. Hypovolemia</label
+            >
+            <label
+              ><input type="radio" name="q84" value="D" /> D.
+              Rhabdomyolysis</label
+            >
+            <label
+              ><input type="radio" name="q84" value="E" /> E. Uncontrolled
+              diabetes</label
+            >
+          </div>
+          <div class="feedback" id="f84">Correct: D</div>
+        </div>
+
+        <!-- Q85 -->
+        <div class="question-block">
+          <span class="question-text"
+            >85. Myasthenia gravis affected receptors are:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q85" value="A" /> A. Acetylcholine
+              post-synaptic cholinergic</label
+            >
+            <label
+              ><input type="radio" name="q85" value="B" /> B. Adrenaline</label
+            >
+            <label
+              ><input type="radio" name="q85" value="D" /> D. Dopamine</label
+            >
+          </div>
+          <div class="feedback" id="f85">Correct: A</div>
+        </div>
+
+        <!-- Q86 -->
+        <div class="question-block">
+          <span class="question-text"
+            >86. First branch of internal carotid artery?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q86" value="A" /> A. Ophthalmic
+              artery</label
+            >
+            <label
+              ><input type="radio" name="q86" value="B" /> B. Anterior
+              cerebral</label
+            >
+            <label
+              ><input type="radio" name="q86" value="E" /> E. Middle
+              meningeal</label
+            >
+          </div>
+          <div class="feedback" id="f86">Correct: A</div>
+        </div>
+
+        <!-- Q87 -->
+        <div class="question-block">
+          <span class="question-text"
+            >87. Tetralogy of Fallot is associated with:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q87" value="A" /> A. Pulmonary
+              stenosis</label
+            >
+            <label><input type="radio" name="q87" value="B" /> B. ASD</label>
+            <label
+              ><input type="radio" name="q87" value="C" /> C. Left ventricular
+              hypertrophy</label
+            >
+          </div>
+          <div class="feedback" id="f87">Correct: A</div>
+        </div>
+
+        <!-- Q88 -->
+        <div class="question-block">
+          <span class="question-text"
+            >88. Most common site of obstruction in hydrocephalus?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q88" value="A" /> A. Foramen of
+              Monro</label
+            >
+            <label
+              ><input type="radio" name="q88" value="C" /> C. Cerebral aqueduct
+              of Silvius</label
+            >
+            <label
+              ><input type="radio" name="q88" value="D" /> D. Subarachnoid
+              space</label
+            >
+          </div>
+          <div class="feedback" id="f88">Correct: C</div>
+        </div>
+
+        <!-- Q89 -->
+        <div class="question-block">
+          <span class="question-text"
+            >89. Site of adrenaline effect to increase heart rate:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q89" value="A" /> A. B1 (Beta-1)</label
+            >
+            <label><input type="radio" name="q89" value="B" /> B. B2</label>
+            <label
+              ><input type="radio" name="q89" value="C" /> C. Alpha-1</label
+            >
+          </div>
+          <div class="feedback" id="f89">Correct: A</div>
+        </div>
+
+        <!-- Q90 -->
+        <div class="question-block">
+          <span class="question-text"
+            >90. Left cardiac shadow in CXR is mainly composed of:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q90" value="A" /> A. Left
+              Ventricle</label
+            >
+            <label
+              ><input type="radio" name="q90" value="B" /> B. Right
+              ventricle</label
+            >
+            <label
+              ><input type="radio" name="q90" value="C" /> C. Left atrium</label
+            >
+          </div>
+          <div class="feedback" id="f90">Correct: A</div>
+        </div>
+
+        <!-- Q91 -->
+        <div class="question-block">
+          <span class="question-text"
+            >91. Most accurate investigation for measuring GFR?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q91" value="A" /> A. Creatinine
+              clearance</label
+            >
+            <label
+              ><input type="radio" name="q91" value="C" /> C. Inulin
+              Clearance</label
+            >
+            <label><input type="radio" name="q91" value="D" /> D. PAH</label>
+          </div>
+          <div class="feedback" id="f91">Correct: C</div>
+        </div>
+
+        <!-- Q92 -->
+        <div class="question-block">
+          <span class="question-text"
+            >92. Main structure divided during Pfannenstiel incision?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q92" value="A" /> A. Rectus sheath
+              (Posterior)</label
+            >
+            <label
+              ><input type="radio" name="q92" value="B" /> B. External
+              oblique</label
+            >
+            <label
+              ><input type="radio" name="q92" value="E" /> E. Rectus muscle
+              (Separated, not divided)</label
+            >
+          </div>
+          <div class="feedback" id="f92">Correct: A</div>
+        </div>
+
+        <!-- Q93 -->
+        <div class="question-block">
+          <span class="question-text"
+            >93. UK Law: If someone had a blood transfusion before:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q93" value="A" /> A. Can't donate for 6
+              months</label
+            >
+            <label
+              ><input type="radio" name="q93" value="C" /> C. Will not be able
+              to donate forever</label
+            >
+            <label
+              ><input type="radio" name="q93" value="D" /> D. Donate if viral
+              screen negative</label
+            >
+          </div>
+          <div class="feedback" id="f93">Correct: C</div>
+        </div>
+
+        <!-- Q94 -->
+        <div class="question-block">
+          <span class="question-text"
+            >94. Cushing disease, most common lab abnormality:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q94" value="A" /> A.
+              Hyperkalemia</label
+            >
+            <label
+              ><input type="radio" name="q94" value="B" /> B. Hypokalemia</label
+            >
+            <label
+              ><input type="radio" name="q94" value="C" /> C.
+              Hyponatremia</label
+            >
+          </div>
+          <div class="feedback" id="f94">Correct: B</div>
+        </div>
+
+        <!-- Q95 -->
+        <div class="question-block">
+          <span class="question-text"
+            >95. Post-burn painless distension, hiccups, vomiting:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q95" value="A" /> A. Curling
+              ulcer</label
+            >
+            <label
+              ><input type="radio" name="q95" value="B" /> B. Acute gastric
+              dilatation</label
+            >
+            <label
+              ><input type="radio" name="q95" value="D" /> D. Intestinal
+              obstruction</label
+            >
+          </div>
+          <div class="feedback" id="f95">Correct: B</div>
+        </div>
+
+        <!-- Q96 -->
+        <div class="question-block">
+          <span class="question-text"
+            >96. High Ca, polyuria, lung mass. Investigation:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q96" value="A" /> A. PTH</label>
+            <label
+              ><input type="radio" name="q96" value="D" /> D. PTHrP (PTH-related
+              peptide)</label
+            >
+            <label
+              ><input type="radio" name="q96" value="E" /> E. Histamine</label
+            >
+          </div>
+          <div class="feedback" id="f96">Correct: D</div>
+        </div>
+
+        <!-- Q97 -->
+        <div class="question-block">
+          <span class="question-text"
+            >97. Iatrogenic esophagus perforation. Nutrition method:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q97" value="A" /> A. TPN</label>
+            <label><input type="radio" name="q97" value="C" /> C. NGT</label>
+            <label
+              ><input type="radio" name="q97" value="D" /> D. Jejunostomy</label
+            >
+          </div>
+          <div class="feedback" id="f97">Correct: D</div>
+        </div>
+
+        <!-- Q98 -->
+        <div class="question-block">
+          <span class="question-text"
+            >98. Which score is NOT relevant perioperatively?</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q98" value="A" /> A. ASA</label>
+            <label><input type="radio" name="q98" value="B" /> B. POSSUM</label>
+            <label
+              ><input type="radio" name="q98" value="D" /> D. APACHE (ICU
+              score)</label
+            >
+          </div>
+          <div class="feedback" id="f98">Correct: D</div>
+        </div>
+
+        <!-- Q99 -->
+        <div class="question-block">
+          <span class="question-text"
+            >99. Right-sided thoracic meningioma (Brown-Sequard):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q99" value="B" /> B. R-sided
+              weakness/vibration loss, L-sided pin prick loss</label
+            >
+            <label
+              ><input type="radio" name="q99" value="A" /> A. L-sided weakness,
+              R-sided pin prick loss</label
+            >
+          </div>
+          <div class="feedback" id="f99">Correct: B</div>
+        </div>
+
+        <!-- Q100 -->
+        <div class="question-block">
+          <span class="question-text"
+            >100. Post-splenectomy, petechial rash, low PLT/HB, high
+            PT/APTT:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q100" value="A" /> A. DIC</label>
+            <label><input type="radio" name="q100" value="B" /> B. ITP</label>
+            <label
+              ><input type="radio" name="q100" value="C" /> C. Sepsis</label
+            >
+          </div>
+          <div class="feedback" id="f100">Correct: A</div>
+        </div>
+
+        <!-- Q101 -->
+        <div class="question-block">
+          <span class="question-text"
+            >101. Pre-op carbohydrate drink importance:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q101" value="A" /> A. Reduce insulin
+              resistance/improve N balance</label
+            >
+            <label
+              ><input type="radio" name="q101" value="D" /> D. Prevent
+              hypothermia</label
+            >
+          </div>
+          <div class="feedback" id="f101">Correct: A</div>
+        </div>
+
+        <!-- Q102 -->
+        <div class="question-block">
+          <span class="question-text"
+            >102. Post-op arrest 1hr after femur shaft fixation:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q102" value="A" /> A. Fat
+              embolism</label
+            >
+            <label><input type="radio" name="q102" value="C" /> C. PE</label>
+            <label><input type="radio" name="q102" value="E" /> E. ARDS</label>
+          </div>
+          <div class="feedback" id="f102">Correct: A</div>
+        </div>
+
+        <!-- Q103 -->
+        <div class="question-block">
+          <span class="question-text"
+            >103. Small bowel resection (multiple) nutrition support:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q103" value="A" /> A. TPN</label>
+            <label><input type="radio" name="q103" value="B" /> B. NGT</label>
+            <label
+              ><input type="radio" name="q103" value="D" /> D.
+              Jejunostomy</label
+            >
+          </div>
+          <div class="feedback" id="f103">Correct: A</div>
+        </div>
+
+        <!-- Q104 -->
+        <div class="question-block">
+          <span class="question-text"
+            >104. Hypospadias is a defect related to:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q104" value="A" /> A. Urogenital
+              fold</label
+            >
+            <label
+              ><input type="radio" name="q104" value="B" /> B. Urogenital
+              tubercle</label
+            >
+          </div>
+          <div class="feedback" id="f104">Correct: A</div>
+        </div>
+
+        <!-- Q105 -->
+        <div class="question-block">
+          <span class="question-text">105. Epispadias is associated with:</span>
+          <div class="options">
+            <label
+              ><input type="radio" name="q105" value="A" /> A. Urethra on
+              anterior surface</label
+            >
+            <label
+              ><input type="radio" name="q105" value="D" /> D. Bladder
+              exstrophy</label
+            >
+          </div>
+          <div class="feedback" id="f105">Correct: D</div>
+        </div>
+
+        <!-- Q106 -->
+        <div class="question-block">
+          <span class="question-text"
+            >106. Sign of anxiety before surgery (Sympathetic):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q106" value="A" /> A.
+              Bronchodilation</label
+            >
+            <label
+              ><input type="radio" name="q106" value="C" /> C. Mitosis (Pupil
+              constriction)</label
+            >
+            <label
+              ><input type="radio" name="q106" value="D" /> D. Increased
+              peristalsis</label
+            >
+          </div>
+          <div class="feedback" id="f106">Correct: A</div>
+        </div>
+
+        <!-- Q107 -->
+        <div class="question-block">
+          <span class="question-text"
+            >107. Child, painless fresh rectal bleeding (small amount):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q107" value="A" /> A.
+              Intussusception</label
+            >
+            <label
+              ><input type="radio" name="q107" value="B" /> B. Juvenile
+              polyp</label
+            >
+            <label
+              ><input type="radio" name="q107" value="D" /> D. Anal
+              fissure</label
+            >
+          </div>
+          <div class="feedback" id="f107">Correct: B</div>
+        </div>
+
+        <!-- Q108 -->
+        <div class="question-block">
+          <span class="question-text"
+            >108. Elective hernia patient, Temp 35.8 C:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q108" value="A" /> A. Do not operate
+              before 36 C</label
+            >
+            <label
+              ><input type="radio" name="q108" value="C" /> C. Warm IV fluids
+              and proceed</label
+            >
+          </div>
+          <div class="feedback" id="f108">Correct: A</div>
+        </div>
+
+        <!-- Q109 -->
+        <div class="question-block">
+          <span class="question-text"
+            >109. GCS drops in head injury (Cushing's Triad):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q109" value="A" /> A. BP increases, HR
+              decreases</label
+            >
+            <label
+              ><input type="radio" name="q109" value="B" /> B. BP increases, HR
+              increases</label
+            >
+            <label
+              ><input type="radio" name="q109" value="C" /> C. BP decreases, HR
+              increases</label
+            >
+          </div>
+          <div class="feedback" id="f109">Correct: A</div>
+        </div>
+
+        <!-- Q110 -->
+        <div class="question-block">
+          <span class="question-text"
+            >110. Reduces postoperative infection risk:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q110" value="A" /> A. Shaving before
+              op</label
+            >
+            <label
+              ><input type="radio" name="q110" value="D" /> D. Preoperative
+              antibiotic</label
+            >
+          </div>
+          <div class="feedback" id="f110">Correct: D</div>
+        </div>
+
+        <!-- Q111 -->
+        <div class="question-block">
+          <span class="question-text"
+            >111. Antithrombin 3 deficiency treatment:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q111" value="A" /> A. LMWH (doesn't
+              work well)</label
+            >
+            <label
+              ><input type="radio" name="q111" value="C" /> C. Warfarin for
+              life</label
+            >
+          </div>
+          <div class="feedback" id="f111">Correct: C</div>
+        </div>
+
+        <!-- Q112 -->
+        <div class="question-block">
+          <span class="question-text"
+            >112. Metastasis and hypercalcemia. Give first:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q112" value="B" /> B. 0.9% Normal
+              Saline</label
+            >
+            <label
+              ><input type="radio" name="q112" value="C" /> C.
+              Pamidronate</label
+            >
+          </div>
+          <div class="feedback" id="f112">Correct: B</div>
+        </div>
+
+        <!-- Q113 -->
+        <div class="question-block">
+          <span class="question-text"
+            >113. Gunshot through right 9th intercostal cartilage:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q113" value="A" /> A. Liver</label>
+            <label
+              ><input type="radio" name="q113" value="B" /> B. Gall
+              bladder</label
+            >
+            <label
+              ><input type="radio" name="q113" value="D" /> D. Left
+              kidney</label
+            >
+          </div>
+          <div class="feedback" id="f113">Correct: A</div>
+        </div>
+
+        <!-- Q114 -->
+        <div class="question-block">
+          <span class="question-text">114. Conducting system of heart:</span>
+          <div class="options">
+            <label
+              ><input type="radio" name="q114" value="A" /> A. SA node</label
+            >
+            <label
+              ><input type="radio" name="q114" value="B" /> B. Musculi
+              pectinati</label
+            >
+            <label
+              ><input type="radio" name="q114" value="D" /> D. Chorda
+              tendineae</label
+            >
+          </div>
+          <div class="feedback" id="f114">Correct: A</div>
+        </div>
+
+        <!-- Q115 -->
+        <div class="question-block">
+          <span class="question-text"
+            >115. PAHA (Para Amino Hippuric Acid) use:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q115" value="A" /> A. Estimation of
+              renal blood flow</label
+            >
+            <label
+              ><input type="radio" name="q115" value="B" /> B. Estimation of
+              GFR</label
+            >
+          </div>
+          <div class="feedback" id="f115">Correct: A</div>
+        </div>
+
+        <!-- Q116 -->
+        <div class="question-block">
+          <span class="question-text">116. Branchial cyst derivative:</span>
+          <div class="options">
+            <label
+              ><input type="radio" name="q116" value="A" /> A. 1st Arch</label
+            >
+            <label
+              ><input type="radio" name="q116" value="B" /> B. 2nd Arch</label
+            >
+            <label
+              ><input type="radio" name="q116" value="D" /> D. 4th Arch</label
+            >
+          </div>
+          <div class="feedback" id="f116">Correct: B</div>
+        </div>
+
+        <!-- Q117 -->
+        <div class="question-block">
+          <span class="question-text">117. Dartos muscle is derived from:</span>
+          <div class="options">
+            <label
+              ><input type="radio" name="q117" value="A" /> A. Superficial
+              fascial layer</label
+            >
+            <label
+              ><input type="radio" name="q117" value="B" /> B. Cremasteric
+              muscle</label
+            >
+            <label
+              ><input type="radio" name="q117" value="E" /> E. External
+              oblique</label
+            >
+          </div>
+          <div class="feedback" id="f117">Correct: A</div>
+        </div>
+
+        <!-- Q118 -->
+        <div class="question-block">
+          <span class="question-text"
+            >118. Pigmented gallstone composition:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q118" value="B" /> B. Calcium
+              bilirubinate</label
+            >
+            <label
+              ><input type="radio" name="q118" value="C" /> C.
+              Cholesterol</label
+            >
+          </div>
+          <div class="feedback" id="f118">Correct: B</div>
+        </div>
+
+        <!-- Q119 -->
+        <div class="question-block">
+          <span class="question-text"
+            >119. Cause of hemolysis in splenomegaly:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q119" value="A" /> A. Destruction by
+              splenic sinusoids</label
+            >
+            <label
+              ><input type="radio" name="q119" value="C" /> C. Portal
+              hypertension</label
+            >
+          </div>
+          <div class="feedback" id="f119">Correct: A</div>
+        </div>
+
+        <!-- Q120 -->
+        <div class="question-block">
+          <span class="question-text"
+            >120. Passing through diaphragmatic opening at T12:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q120" value="A" /> A. Azygos vein and
+              thoracic duct (and Aorta)</label
+            >
+            <label
+              ><input type="radio" name="q120" value="B" /> B. Vagus and
+              esophagus</label
+            >
+            <label
+              ><input type="radio" name="q120" value="C" /> C. IVC and
+              phrenic</label
+            >
+          </div>
+          <div class="feedback" id="f120">Correct: A</div>
+        </div>
+
+        <div class="btn-container">
+          <button type="button" onclick="calculateScore()">
+            Submit Answers
+          </button>
+          <div id="result-area"></div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const answers = {
+        q81: "B",
+        q82: "B",
+        q83: "A",
+        q84: "D",
+        q85: "A",
+        q86: "A",
+        q87: "A",
+        q88: "C",
+        q89: "A",
+        q90: "A",
+        q91: "C",
+        q92: "A",
+        q93: "C",
+        q94: "B",
+        q95: "B",
+        q96: "D",
+        q97: "D",
+        q98: "D",
+        q99: "B",
+        q100: "A",
+        q101: "A",
+        q102: "A",
+        q103: "A",
+        q104: "A",
+        q105: "D",
+        q106: "A",
+        q107: "B",
+        q108: "A",
+        q109: "A",
+        q110: "D",
+        q111: "C",
+        q112: "B",
+        q113: "A",
+        q114: "A",
+        q115: "A",
+        q116: "B",
+        q117: "A",
+        q118: "B",
+        q119: "A",
+        q120: "A",
+      };
+
+      function calculateScore() {
+        let score = 0;
+        let total = Object.keys(answers).length;
+        const form = document.getElementById("quizForm");
+
+        for (let q in answers) {
+          const userAnswer = form[q].value;
+          const feedback = document.getElementById("f" + q.substring(1));
+
+          if (userAnswer === answers[q]) {
+            score++;
+            if (feedback) feedback.className = "feedback correct-ans";
+          } else {
+            if (feedback) feedback.className = "feedback wrong-ans";
+          }
+          if (feedback) feedback.style.display = "block";
+        }
+
+        const resultArea = document.getElementById("result-area");
+        resultArea.style.display = "block";
+        resultArea.innerHTML = `<h3>Your Score: ${score} / ${total} (${Math.round((score / total) * 100)}%)</h3>`;
+        resultArea.style.backgroundColor =
+          score > total / 2 ? "#d4edda" : "#f8d7da";
+
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    </script>
+  </body>
+</html>

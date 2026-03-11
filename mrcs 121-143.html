@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MRCS Recall Quiz: 121-143</title>
+    <style>
+      :root {
+        --primary: #2c3e50;
+        --secondary: #3498db;
+        --success: #27ae60;
+        --error: #e74c3c;
+        --bg: #f4f7f6;
+      }
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: var(--bg);
+        margin: 0;
+        padding: 20px;
+        color: #333;
+      }
+      .container {
+        max-width: 850px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: var(--primary);
+        border-bottom: 3px solid var(--secondary);
+        padding-bottom: 10px;
+      }
+      .q-card {
+        margin-bottom: 25px;
+        padding: 20px;
+        border-left: 5px solid #ddd;
+        background: #fff;
+        border-radius: 0 8px 8px 0;
+        transition: 0.3s;
+        border: 1px solid #eee;
+        border-left-width: 5px;
+      }
+      .q-card:hover {
+        border-color: var(--secondary);
+      }
+      .q-text {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+      }
+      .options {
+        display: grid;
+        gap: 10px;
+      }
+      .options label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .options label:hover {
+        background: #f0f7ff;
+      }
+      input[type="radio"] {
+        margin-right: 12px;
+        transform: scale(1.2);
+      }
+      .controls {
+        position: sticky;
+        bottom: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        gap: 15px;
+      }
+      button {
+        flex: 1;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+      .btn-submit {
+        background: var(--success);
+        color: white;
+      }
+      .btn-reset {
+        background: #95a5a6;
+        color: white;
+      }
+      .feedback {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+        font-weight: bold;
+      }
+      .correct {
+        background: #d4edda;
+        color: #155724;
+      }
+      .wrong {
+        background: #f8d7da;
+        color: #721c24;
+      }
+      #final-score {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 20px;
+        display: none;
+        padding: 20px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MRCS Recall Quiz (121 - 143)</h1>
+      <form id="quizForm">
+        <!-- Q121 -->
+        <div class="q-card">
+          <span class="q-text"
+            >121. Best investigation for a patient with suspected aortic
+            dissection:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q121" value="A" /> A. CT
+              Angiography</label
+            >
+            <label><input type="radio" name="q121" value="B" /> B. MRI</label>
+            <label
+              ><input type="radio" name="q121" value="C" /> C. Transeosophageal
+              Echocardiogram (TOE)</label
+            >
+            <label
+              ><input type="radio" name="q121" value="D" /> D. Chest
+              X-ray</label
+            >
+          </div>
+          <div class="feedback" id="f121"></div>
+        </div>
+
+        <!-- Q122 -->
+        <div class="q-card">
+          <span class="q-text"
+            >122. Which of the following is most likely to cause a metabolic
+            alkalosis with hypokalemia?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q122" value="A" /> A. Pyloric
+              stenosis</label
+            >
+            <label
+              ><input type="radio" name="q122" value="B" /> B. Diarrhea</label
+            >
+            <label
+              ><input type="radio" name="q122" value="C" /> C. Renal tubular
+              acidosis</label
+            >
+            <label
+              ><input type="radio" name="q122" value="D" /> D. Small bowel
+              obstruction</label
+            >
+          </div>
+          <div class="feedback" id="f122"></div>
+        </div>
+
+        <!-- Q123 -->
+        <div class="q-card">
+          <span class="q-text"
+            >123. A 60-year-old man presents with a history of weight loss and
+            hematemesis. Gastroscopy shows a malignant ulcer in the stomach.
+            Which lymph node group is likely involved first?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q123" value="A" /> A. Virchow’s node
+              (Supraclavicular)</label
+            >
+            <label
+              ><input type="radio" name="q123" value="B" /> B. Coeliac
+              nodes</label
+            >
+            <label
+              ><input type="radio" name="q123" value="C" /> C. Para-aortic
+              nodes</label
+            >
+            <label
+              ><input type="radio" name="q123" value="D" /> D. Mesenteric
+              nodes</label
+            >
+          </div>
+          <div class="feedback" id="f123"></div>
+        </div>
+
+        <!-- Q124 -->
+        <div class="q-card">
+          <span class="q-text"
+            >124. Regarding the anatomy of the femoral canal, which structure
+            lies laterally?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q124" value="A" /> A. Femoral
+              vein</label
+            >
+            <label
+              ><input type="radio" name="q124" value="B" /> B. Lacunar
+              ligament</label
+            >
+            <label
+              ><input type="radio" name="q124" value="C" /> C. Inguinal
+              ligament</label
+            >
+            <label
+              ><input type="radio" name="q124" value="D" /> D. Pectineal
+              ligament</label
+            >
+          </div>
+          <div class="feedback" id="f124"></div>
+        </div>
+
+        <!-- Q125 -->
+        <div class="q-card">
+          <span class="q-text"
+            >125. Most common cause of primary hyperparathyroidism:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q125" value="A" /> A. Parathyroid
+              Adenoma</label
+            >
+            <label
+              ><input type="radio" name="q125" value="B" /> B. Parathyroid
+              Hyperplasia</label
+            >
+            <label
+              ><input type="radio" name="q125" value="C" /> C. Parathyroid
+              Carcinoma</label
+            >
+            <label
+              ><input type="radio" name="q125" value="D" /> D. Multiple
+              Endocrine Neoplasia</label
+            >
+          </div>
+          <div class="feedback" id="f125"></div>
+        </div>
+
+        <!-- Q126 -->
+        <div class="q-card">
+          <span class="q-text"
+            >126. A 25-year-old male with sudden onset of scrotal pain, high
+            riding testis, and negative Prehn's sign. Management:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q126" value="A" /> A. Urgent surgical
+              exploration</label
+            >
+            <label
+              ><input type="radio" name="q126" value="B" /> B.
+              Antibiotics</label
+            >
+            <label
+              ><input type="radio" name="q126" value="C" /> C. Scrotal
+              Ultrasound</label
+            >
+            <label
+              ><input type="radio" name="q126" value="D" /> D. Manual detorsion
+              only</label
+            >
+          </div>
+          <div class="feedback" id="f126"></div>
+        </div>
+
+        <!-- Q127 -->
+        <div class="q-card">
+          <span class="q-text"
+            >127. Which nerve is at risk during a submandibular gland
+            excision?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q127" value="A" /> A. Marginal
+              mandibular nerve</label
+            >
+            <label
+              ><input type="radio" name="q127" value="B" /> B. Hypoglossal
+              nerve</label
+            >
+            <label
+              ><input type="radio" name="q127" value="C" /> C. Lingual
+              nerve</label
+            >
+            <label
+              ><input type="radio" name="q127" value="D" /> D. All of the
+              above</label
+            >
+          </div>
+          <div class="feedback" id="f127"></div>
+        </div>
+
+        <!-- Q128 -->
+        <div class="q-card">
+          <span class="q-text"
+            >128. What is the most common site for a Morgagni hernia?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q128" value="A" /> A. Anterior
+              Right</label
+            >
+            <label
+              ><input type="radio" name="q128" value="B" /> B. Posterior
+              Left</label
+            >
+            <label
+              ><input type="radio" name="q128" value="C" /> C. Central
+              tendon</label
+            >
+            <label
+              ><input type="radio" name="q128" value="D" /> D. Esophageal
+              hiatus</label
+            >
+          </div>
+          <div class="feedback" id="f128"></div>
+        </div>
+
+        <!-- Q129 -->
+        <div class="q-card">
+          <span class="q-text"
+            >129. Post-operative patient with low urine output, high urea, and
+            high creatinine. FeNa < 1%. Cause:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q129" value="A" /> A. Pre-renal
+              failure</label
+            >
+            <label
+              ><input type="radio" name="q129" value="B" /> B. Acute tubular
+              necrosis</label
+            >
+            <label
+              ><input type="radio" name="q129" value="C" /> C. Post-renal
+              obstruction</label
+            >
+            <label
+              ><input type="radio" name="q129" value="D" /> D. Interstitial
+              nephritis</label
+            >
+          </div>
+          <div class="feedback" id="f129"></div>
+        </div>
+
+        <!-- Q130 -->
+        <div class="q-card">
+          <span class="q-text"
+            >130. Nerve supply to the cricothyroid muscle:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q130" value="A" /> A. External branch
+              of superior laryngeal nerve</label
+            >
+            <label
+              ><input type="radio" name="q130" value="B" /> B. Recurrent
+              laryngeal nerve</label
+            >
+            <label
+              ><input type="radio" name="q130" value="C" /> C. Internal branch
+              of superior laryngeal nerve</label
+            >
+            <label
+              ><input type="radio" name="q130" value="D" /> D. Glossopharyngeal
+              nerve</label
+            >
+          </div>
+          <div class="feedback" id="f130"></div>
+        </div>
+
+        <!-- Q131 -->
+        <div class="q-card">
+          <span class="q-text"
+            >131. The reciprocal of Absolute Risk Reduction (1 / ARR) is known
+            as:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q131" value="A" /> A. Number Needed to
+              Treat (NNT)</label
+            >
+            <label
+              ><input type="radio" name="q131" value="B" /> B. Relative
+              Risk</label
+            >
+            <label
+              ><input type="radio" name="q131" value="C" /> C. Odds Ratio</label
+            >
+            <label
+              ><input type="radio" name="q131" value="D" /> D.
+              Sensitivity</label
+            >
+          </div>
+          <div class="feedback" id="f131"></div>
+        </div>
+
+        <!-- Q132 -->
+        <div class="q-card">
+          <span class="q-text"
+            >132. Treatment of choice for a patient with tension
+            pneumothorax:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q132" value="A" /> A. Needle
+              decompression (2nd ICS MCL)</label
+            >
+            <label
+              ><input type="radio" name="q132" value="B" /> B. Chest X-ray
+              first</label
+            >
+            <label
+              ><input type="radio" name="q132" value="C" /> C. Immediate
+              intubation</label
+            >
+            <label
+              ><input type="radio" name="q132" value="D" /> D. Chest tube
+              only</label
+            >
+          </div>
+          <div class="feedback" id="f132"></div>
+        </div>
+
+        <!-- Q133 -->
+        <div class="q-card">
+          <span class="q-text"
+            >133. Main blood supply to the head of the femur in adults:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q133" value="A" /> A. Medial circumflex
+              femoral artery</label
+            >
+            <label
+              ><input type="radio" name="q133" value="B" /> B. Lateral
+              circumflex femoral artery</label
+            >
+            <label
+              ><input type="radio" name="q133" value="C" /> C. Artery to the
+              ligamentum teres</label
+            >
+            <label
+              ><input type="radio" name="q133" value="D" /> D. Obturator
+              artery</label
+            >
+          </div>
+          <div class="feedback" id="f133"></div>
+        </div>
+
+        <!-- Q134 -->
+        <div class="q-card">
+          <span class="q-text"
+            >134. Which hormone is primarily responsible for gallbladder
+            contraction?</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q134" value="A" /> A. Cholecystokinin
+              (CCK)</label
+            >
+            <label
+              ><input type="radio" name="q134" value="B" /> B. Secretin</label
+            >
+            <label
+              ><input type="radio" name="q134" value="C" /> C. Gastrin</label
+            >
+            <label
+              ><input type="radio" name="q134" value="D" /> D.
+              Somatostatin</label
+            >
+          </div>
+          <div class="feedback" id="f134"></div>
+        </div>
+
+        <!-- Q135 -->
+        <div class="q-card">
+          <span class="q-text"
+            >135. First-line investigation for a 40-year-old woman with a
+            palpable breast lump:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q135" value="A" /> A. Triple assessment
+              (Exam, Imaging, Biopsy)</label
+            >
+            <label
+              ><input type="radio" name="q135" value="B" /> B. Mammogram
+              only</label
+            >
+            <label
+              ><input type="radio" name="q135" value="C" /> C. Ultrasound
+              only</label
+            >
+            <label
+              ><input type="radio" name="q135" value="D" /> D.
+              Reassurance</label
+            >
+          </div>
+          <div class="feedback" id="f135"></div>
+        </div>
+
+        <!-- Q136 -->
+        <div class="q-card">
+          <span class="q-text"
+            >136. Preferred site for an emergency cricothyroidotomy:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q136" value="A" /> A. Cricothyroid
+              membrane</label
+            >
+            <label
+              ><input type="radio" name="q136" value="B" /> B. Between 2nd and
+              3rd tracheal rings</label
+            >
+            <label
+              ><input type="radio" name="q136" value="C" /> C. Above the thyroid
+              cartilage</label
+            >
+            <label
+              ><input type="radio" name="q136" value="D" /> D. Suprasternal
+              notch</label
+            >
+          </div>
+          <div class="feedback" id="f136"></div>
+        </div>
+
+        <!-- Q137 -->
+        <div class="q-card">
+          <span class="q-text"
+            >137. Commonest site of a volvulus in the elderly:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q137" value="A" /> A. Sigmoid
+              colon</label
+            >
+            <label
+              ><input type="radio" name="q137" value="B" /> B. Caecum</label
+            >
+            <label
+              ><input type="radio" name="q137" value="C" /> C. Stomach</label
+            >
+            <label
+              ><input type="radio" name="q137" value="D" /> D. Small
+              bowel</label
+            >
+          </div>
+          <div class="feedback" id="f137"></div>
+        </div>
+
+        <!-- Q138 -->
+        <div class="q-card">
+          <span class="q-text"
+            >138. The "Golden Hour" in trauma refers to:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q138" value="A" /> A. The first hour
+              where definitive care significantly improves survival</label
+            >
+            <label
+              ><input type="radio" name="q138" value="B" /> B. The time to wait
+              before operating</label
+            >
+            <label
+              ><input type="radio" name="q138" value="C" /> C. The time it takes
+              to get an MRI</label
+            >
+            <label
+              ><input type="radio" name="q138" value="D" /> D. None of the
+              above</label
+            >
+          </div>
+          <div class="feedback" id="f138"></div>
+        </div>
+
+        <!-- Q139 -->
+        <div class="q-card">
+          <span class="q-text"
+            >139. Most common nerve injured during carotid endarterectomy:</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q139" value="A" /> A. Hypoglossal
+              nerve</label
+            >
+            <label
+              ><input type="radio" name="q139" value="B" /> B. Vagus
+              nerve</label
+            >
+            <label
+              ><input type="radio" name="q139" value="C" /> C. Glossopharyngeal
+              nerve</label
+            >
+            <label
+              ><input type="radio" name="q139" value="D" /> D. Accessory
+              nerve</label
+            >
+          </div>
+          <div class="feedback" id="f139"></div>
+        </div>
+
+        <!-- Q140 -->
+        <div class="q-card">
+          <span class="q-text">140. Which cell secretes Intrinsic Factor?</span>
+          <div class="options">
+            <label
+              ><input type="radio" name="q140" value="A" /> A. Parietal
+              cells</label
+            >
+            <label
+              ><input type="radio" name="q140" value="B" /> B. Chief
+              cells</label
+            >
+            <label
+              ><input type="radio" name="q140" value="C" /> C. G-cells</label
+            >
+            <label
+              ><input type="radio" name="q140" value="D" /> D. Goblet
+              cells</label
+            >
+          </div>
+          <div class="feedback" id="f140"></div>
+        </div>
+
+        <!-- Q141 -->
+        <div class="q-card">
+          <span class="q-text"
+            >141. Management of a category 1 hemorrhage (loss < 15%):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q141" value="A" /> A. Crystalloid fluid
+              resuscitation</label
+            >
+            <label
+              ><input type="radio" name="q141" value="B" /> B. Immediate blood
+              transfusion</label
+            >
+            <label
+              ><input type="radio" name="q141" value="C" /> C. Observation
+              only</label
+            >
+            <label
+              ><input type="radio" name="q141" value="D" /> D.
+              Vasopressors</label
+            >
+          </div>
+          <div class="feedback" id="f141"></div>
+        </div>
+
+        <!-- Q142 -->
+        <div class="q-card">
+          <span class="q-text"
+            >142. Investigation of choice for a patient with suspected CBD
+            stones:</span
+          >
+          <div class="options">
+            <label><input type="radio" name="q142" value="A" /> A. MRCP</label>
+            <label><input type="radio" name="q142" value="B" /> B. ERCP</label>
+            <label
+              ><input type="radio" name="q142" value="C" /> C. Ultrasound
+              abdomen</label
+            >
+            <label
+              ><input type="radio" name="q142" value="D" /> D. CT scan</label
+            >
+          </div>
+          <div class="feedback" id="f142"></div>
+        </div>
+
+        <!-- Q143 -->
+        <div class="q-card">
+          <span class="q-text"
+            >143. Progressive unremitting jaundice and a palpable, non-tender
+            gallbladder (Courvoisier's law):</span
+          >
+          <div class="options">
+            <label
+              ><input type="radio" name="q143" value="A" /> A. Carcinoma head of
+              pancreas</label
+            >
+            <label
+              ><input type="radio" name="q143" value="B" /> B. Gallstones in
+              CBD</label
+            >
+            <label
+              ><input type="radio" name="q143" value="C" /> C.
+              Cholecystitis</label
+            >
+            <label
+              ><input type="radio" name="q143" value="D" /> D.
+              Cholangitis</label
+            >
+          </div>
+          <div class="feedback" id="f143"></div>
+        </div>
+
+        <div class="controls">
+          <button
+            type="button"
+            class="btn-reset"
+            onclick="window.location.reload()"
+          >
+            Reset Quiz
+          </button>
+          <button type="button" class="btn-submit" onclick="grade()">
+            Submit Quiz
+          </button>
+        </div>
+      </form>
+
+      <div id="final-score"></div>
+    </div>
+
+    <script>
+      const keys = {
+        q121: "A",
+        q122: "A",
+        q123: "B",
+        q124: "A",
+        q125: "A",
+        q126: "A",
+        q127: "D",
+        q128: "A",
+        q129: "A",
+        q130: "A",
+        q131: "A",
+        q132: "A",
+        q133: "A",
+        q134: "A",
+        q135: "A",
+        q136: "A",
+        q137: "A",
+        q138: "A",
+        q139: "A",
+        q140: "A",
+        q141: "A",
+        q142: "A",
+        q143: "A",
+      };
+
+      function grade() {
+        let score = 0;
+        let total = Object.keys(keys).length;
+        const form = document.getElementById("quizForm");
+
+        for (let q in keys) {
+          let userVal = form.elements[q].value;
+          let feedback = document.getElementById("f" + q.substring(1));
+
+          if (!feedback) continue;
+
+          feedback.style.display = "block";
+          if (userVal === keys[q]) {
+            score++;
+            feedback.className = "feedback correct";
+            feedback.innerHTML = "Correct!";
+          } else {
+            feedback.className = "feedback wrong";
+            feedback.innerHTML = "Incorrect. Correct answer: " + keys[q];
+          }
+        }
+
+        const scoreBox = document.getElementById("final-score");
+        scoreBox.style.display = "block";
+        scoreBox.style.background = score > total / 2 ? "#d4edda" : "#f8d7da";
+        scoreBox.innerHTML = "Final Score: " + score + " / " + total;
+        window.scrollTo(0, 0);
+      }
+    </script>
+  </body>
+</html>
